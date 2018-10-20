@@ -1,4 +1,6 @@
-package medication
+package healer
+
+import medication.*
 
 class Doctor {
 

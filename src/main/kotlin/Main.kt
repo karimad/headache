@@ -1,6 +1,6 @@
-import medication.Doctor
-import medication.Pharmacy
-import medication.Prescription
+import healer.Doctor
+import healer.Pharmacy
+import healer.Prescription
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -13,8 +13,8 @@ fun main(args :Array<String>) {
         bind<Doctor>() with singleton { Doctor() }
     }
 
-    val pharmacy:Pharmacy by kodein.instance()
-    val doctor:Doctor by kodein.instance()
+    val pharmacy: Pharmacy by kodein.instance()
+    val doctor: Doctor by kodein.instance()
 
     println(pharmacy.ask(doctor, Prescription.HEADACHE).healMe())
 

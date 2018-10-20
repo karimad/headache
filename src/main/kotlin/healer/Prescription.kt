@@ -1,4 +1,4 @@
-package medication
+package healer
 
 enum class Prescription {
     HEADACHE,

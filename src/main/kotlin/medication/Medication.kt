@@ -5,5 +5,5 @@ abstract class Medication {
     abstract val posology : Int
     abstract val nbDays: Int
 
-    open fun healMe() = """Take a $name with a posology of $posology caps per $nbDays day(s)"""
+    open fun healMe() = """Take a $name with a posology of $posology caps for $nbDays day(s)"""
 }
