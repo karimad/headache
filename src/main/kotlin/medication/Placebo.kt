@@ -7,5 +7,5 @@ class Placebo: Medication {
 
     constructor() : super()
 
-    override fun healMe() = """Go back to work !! You're not sick"""
+    override fun healMe() = """Go back to work !! You're not sick !!"""
 }

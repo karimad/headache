@@ -1,10 +1,14 @@
 package healer
 
-import medication.Medication
+import medication.*
 
 class Pharmacy {
-    fun ask(doctor: Doctor, prescription: Prescription): Medication {
-        val medication = doctor.gimmeMyMeds(prescription)
-        return medication
+
+    fun gimmeMyMeds(prescription: Prescription) : Medication {
+        when(prescription) {
+            Prescription.HEADACHE -> return Paracetamol()
+            Prescription.FEVER -> return Ibuprofene()
+            Prescription.FAKEIT -> return Placebo()
+        }
     }
 }
