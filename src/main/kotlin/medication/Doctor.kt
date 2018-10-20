@@ -6,9 +6,9 @@ class Doctor {
 
     fun gimmeMyMeds(s: String) : Medication {
         when(s) {
-            "D" -> return Doliprane()
-            "X" -> return Xanax()
+            "P" -> return Paracetamol()
+            "I" -> return Ibuprofene()
         }
-        throw IllegalArgumentException("no meds found")
+        throw IllegalArgumentException("you're not sick")
     }
 }

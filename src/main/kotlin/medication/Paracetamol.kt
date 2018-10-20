@@ -1,8 +1,8 @@
 package medication
 
-class Doliprane : Medication {
+class Paracetamol : Medication {
 
-    override val name:String = "Doliprane"
+    override val name:String = "Paracetamol"
     override val posology:Int = 4
     override val nbDays:Int = 1
 
