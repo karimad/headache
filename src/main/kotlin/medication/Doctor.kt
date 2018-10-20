@@ -1,14 +1,12 @@
 package medication
 
-import java.lang.IllegalArgumentException
-
 class Doctor {
 
-    fun gimmeMyMeds(s: String) : Medication {
-        when(s) {
-            "P" -> return Paracetamol()
-            "I" -> return Ibuprofene()
+    fun gimmeMyMeds(prescription: Prescription) : Medication {
+        when(prescription) {
+            Prescription.HEADACHE -> return Paracetamol()
+            Prescription.FEVER -> return Ibuprofene()
+            Prescription.FAKEIT -> return Placebo()
         }
-        throw IllegalArgumentException("you're not sick")
     }
 }

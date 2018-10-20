@@ -1,5 +1,6 @@
 import medication.Doctor
 import medication.Pharmacy
+import medication.Prescription
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -15,5 +16,9 @@ fun main(args :Array<String>) {
     val pharmacy:Pharmacy by kodein.instance()
     val doctor:Doctor by kodein.instance()
 
-    print(pharmacy.ask(doctor).medicate())
+    println(pharmacy.ask(doctor, Prescription.HEADACHE).healMe())
+
+    println(pharmacy.ask(doctor, Prescription.FAKEIT).healMe())
+
+    println(pharmacy.ask(doctor, Prescription.FEVER).healMe())
 }
