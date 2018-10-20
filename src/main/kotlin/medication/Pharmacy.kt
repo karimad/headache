@@ -1,0 +1,6 @@
+package medication
+
+class Pharmacy {
+
+
+}
